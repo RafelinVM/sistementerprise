@@ -34,5 +34,6 @@ class UserSeeder extends Seeder
         ]);
         $cindy->assignRole('operator'); //role
         $cindy->givePermissionTo('delete users'); //memberikan akses permission langsung
+
     }
 }
