@@ -45,7 +45,40 @@
                     <li class="menu-item">
                         <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-home"></i>
-                            <div data-i18n="Menu 1">Menu 1</div>
+                            <div data-i18n="Human Management">Human Management</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="{{ route('departments.index') }}" class="menu-link">
+                                    <div>Departments</div>
+                                </a>
+                            </li>                            
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div>Employees</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div>Payroll</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div>Leave</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div>Presence</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-home"></i>
+                            <div data-i18n="Menu 1">Human Resources</div>
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
@@ -60,13 +93,10 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-menu"></i>
-                            <div data-i18n="Menu 2">Menu 2</div>
-                        </a>
-                    </li>
                 </ul>
+                
+                
+                </li>
             </aside>
             <!-- / Menu -->
 
@@ -142,10 +172,15 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="auth-login-basic.html">
+                                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                             <i class="bx bx-power-off me-2"></i>
                                             <span class="align-middle">Log Out</span>
                                         </a>
+                                        
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                        
                                     </li>
                                 </ul>
                             </li>
