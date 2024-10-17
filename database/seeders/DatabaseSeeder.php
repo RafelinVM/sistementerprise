@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\DepartmentsSeeder;
+use Database\Seeders\EmployeeSeeder; // Import EmployeeSeeder
 use Spatie\Permission\Models\Permission;
 
 class DatabaseSeeder extends Seeder
@@ -15,10 +16,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-        PermissionSeeder::class,
-        RoleSeeder::class,
-        UserSeeder::class,
-        DepartmentsSeeder::class,
+            PermissionSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
+            DepartmentsSeeder::class,
+            EmployeeSeeder::class, // Tambahkan EmployeeSeeder di sini
         ]);
     }
 }
