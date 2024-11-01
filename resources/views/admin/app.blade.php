@@ -59,18 +59,23 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
+                                <a href="{{ route('payroll.index') }}" class="menu-link">
                                     <div>Payroll</div>
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
+                                <a href="{{ route('leave.index') }}" class="menu-link">
                                     <div>Leave</div>
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="#" class="menu-link">
-                                    <div>Presence</div>
+                                <a href="{{route('promotions.index')}}" class="menu-link">
+                                    <div >Promotion</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="{{route('send_promotions.index')}}" class="menu-link">
+                                    <div >Send Promotion</div>
                                 </a>
                             </li>
                         </ul>
@@ -177,9 +182,6 @@
                                             <span class="align-middle">Log Out</span>
                                         </a>
                                         
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
                                         
                                     </li>
                                 </ul>

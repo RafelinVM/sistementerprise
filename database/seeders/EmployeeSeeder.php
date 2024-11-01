@@ -25,7 +25,7 @@ class EmployeeSeeder extends Seeder
                 'address' => $faker->address,
                 'place_of_birth' => $faker->city,
                 'dob' => $faker->date(),
-                'religion' => $faker->word,
+                'religion' => $faker->randomElement(['Islam','Katolik','Kristen Protestan','Konghucu','Hindu','Buddha']),
                 'sex' => $faker->randomElement(['Male', 'Female']),
                 'phone' => $faker->phoneNumber,
                 'salary' => $faker->randomFloat(2, 3000, 8000), // Gaji acak antara 3000 dan 8000

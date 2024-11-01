@@ -32,8 +32,8 @@
                     <td>{{ $employee->department->name ?? 'N/A' }}</td> <!-- Ganti dengan nama departemen jika ada relasi -->
                     <td>{{ $employee->address }}</td>
                     <td>{{ $employee->phone }}</td>
-                    <td>{{ number_format($employee->salary, 0, ',', '.') }} IDR</td> <!-- Format gaji -->
-                    <td>
+                    <td>Rp.{{ number_format($employee->salary, 0, ',', '.') }} </td> <!-- Format gaji -->
+                    <td>{{ $employee->photo }}</td>
                         <a href="{{ route('employees.show', $employee->id) }}" class="btn btn-info">Detail</a>
                         <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-warning">Edit</a>
                         <form action="{{ route('employees.destroy', $employee->id) }}" method="POST" style="display:inline;">

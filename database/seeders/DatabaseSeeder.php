@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Payroll;
 use Illuminate\Database\Seeder;
 use Database\Seeders\DepartmentsSeeder;
 use Database\Seeders\EmployeeSeeder; // Import EmployeeSeeder
@@ -18,9 +20,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PermissionSeeder::class,
             RoleSeeder::class,
-            UserSeeder::class,
             DepartmentsSeeder::class,
             EmployeeSeeder::class, // Tambahkan EmployeeSeeder di sini
+            PayrollSeeder::class,
         ]);
     }
 }
